@@ -1,16 +1,18 @@
 import React from 'react'
-import { TheMovieDB } from './service'
 import { Main } from './pages'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import './App.css'
 
-function App() {
-
-  const call = () => {
-    // TheMovieDB.fetchActionMovies()
-  }
-
+const App: React.FC = () => {
   return (
-    <div>
-      <Main/>
+    <div className="app">
+      <Router>
+        <Switch>
+          <Route path="/">
+            <Main />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   )
 }
